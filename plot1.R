@@ -1,7 +1,0 @@
-setwd("D:\\apprentissageskills\\coursera\\exploratary data analysis\\assignment1")
-hhpc<-read.csv("household_power_consumption.txt",header = TRUE,sep = ";")
-hhpcd<-filter(hhpc,Date==as.Date("02/02/2007")|Date==as.Date("01/02/2007"))
-hhpcdg<-as.numeric(hhpcd$Global_active_power)
-png("plot1.png")
-hist(hhpcdg)
-dev.off()

@@ -1,0 +1,8 @@
+setwd("D:\\apprentissageskills\\coursera\\exploratary data analysis\\assignment1")
+hhpc<-read.csv("household_power_consumption.txt",header = TRUE,sep = ";")
+library(dplyr)
+hhpcd<-filter(hhpc,Date==as.Date("02/02/2007")|Date==as.Date("01/02/2007"))
+hhpcdg<-as.numeric(hhpcd$Global_active_power)
+png("plot1.png")
+hist(hhpcdg,main = "Global active power",col = "red",xlab ="Global active power(kilowatts)" )
+dev.off()
